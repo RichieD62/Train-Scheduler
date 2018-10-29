@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Train Scheduler</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Train Scheduler</h1>
+        <p class="lead">Choo choo!</p>
+    </div>
+</div>  
+
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <!-- The scope attribute specifies that this is a header for a column -->
+          <th scope="col">Train Name</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Frequency (min)</th>
+          <th scope="col">Next Arrival</th>
+          <th scope="col">Minutes Away</th>
+        </tr>
+      </thead>
+      <tbody id= "myTable">
+        <tr>
+          <td>Express</td>
+          <td>Yuma</td>
+          <td>120</td>
+          <td>3:10 PM</td>
+          <td>120</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form>
+        <div class="form-group">
+          <label for="trainName">Train Name</label>
+          <input type="train" class="form-control" id="input-name" placeholder="Enter Train Name">
+        </div>
+        <div class="form-group">
+          <label for="destination">Destination</label>
+          <input type="dest" class="form-control" id="input-destination" placeholder="Enter Destination">
+        </div>
+        <div class="form-group">
+            <label for="firstTrainTime">First Train Time (HH:mm) - Military Time</label>
+            <input type="first-time" class="form-control" id="input-firstTime" placeholder="Enter First Arrival">
+        </div>
+        <div class="form-group">
+            <label for="frequency">Frequency (min)</label>
+            <input type="frequency-min" class="form-control" id="input-frequency" placeholder="Enter Frequency">
+        </div>
+        
+        <button type="submit" id = "submit-button" class="btn btn-primary">Submit</button>
+      </form>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+  <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+
+  <script type="text/javascript">
